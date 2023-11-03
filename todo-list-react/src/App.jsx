@@ -1,7 +1,8 @@
 import "./style.css"
+import { Task } from "./Task.jsx"
 
 export default function App(){
-  return(
+  return (
     <>
       <h1 className="title"> 
         To-Do List App
@@ -11,10 +12,21 @@ export default function App(){
           New Task Entry
         </label>
         <input type="text"></input>
-        <button className="btns">
+        <button className="btn">
           Add
         </button>
       </form>
+
+      <h1 className="header">
+        To-Do List
+      </h1>
+
+      <ul className="list">
+        <Task></Task>
+      </ul>
+
+
+
     </>
   )
 }
