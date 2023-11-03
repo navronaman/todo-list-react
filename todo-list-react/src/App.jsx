@@ -22,14 +22,14 @@ export default function App(){
       <h1 className="title"> 
         To-Do List App
       </h1>
-      <form className="form">
+      <form className="form" onSubmit={addTask}>
         <label className="text">
           New Task Entry
         </label>
         <input value = {newTask} 
         onChange = {e => setNewTask(e.target.value)} 
         type="text"></input>
-        <button onClick={addTask} className="btn">
+        <button className="btn">
           Add
         </button>
       </form>
