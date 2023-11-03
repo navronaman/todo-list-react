@@ -1,0 +1,24 @@
+# Logs
+todo-list-react/logs
+todo-list-react/*.log
+todo-list-react/npm-debug.log*
+todo-list-react/yarn-debug.log*
+todo-list-react/yarn-error.log*
+todo-list-react/pnpm-debug.log*
+todo-list-react/lerna-debug.log*
+
+todo-list-react/node_modules
+todo-list-react/dist
+todo-list-react/dist-ssr
+todo-list-react/*.local
+
+# Editor directories and files
+todo-list-react/.vscode/*
+!todo-list-react/.vscode/extensions.json
+todo-list-react/.idea
+todo-list-react/.DS_Store
+todo-list-react/*.suo
+todo-list-react/*.ntvs*
+todo-list-react/*.njsproj
+todo-list-react/*.sln
+todo-list-react/*.sw?
