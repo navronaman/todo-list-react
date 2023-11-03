@@ -1,9 +1,9 @@
-export function Task(){
+export function Task(props){
     return (
         <li>
             <label>
                 <input type="checkbox"></input>
-                Go do your dishes
+                {props.text}
             </label>
         </li>
     )

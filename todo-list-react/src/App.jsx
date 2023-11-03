@@ -1,7 +1,22 @@
 import "./style.css"
 import { Task } from "./Task.jsx"
+import { useState } from "react" 
 
 export default function App(){
+  const [newTask, setNewTask] = useState("")
+  const [tasks, setTasks] = useState([])
+
+  function addTask(e){
+    e.preventDefault()
+
+    setTasks(currentTasks => {
+      return [...currentTasks, { text: newTask }]
+    })
+
+    setNewTask("")
+
+  }
+
   return (
     <>
       <h1 className="title"> 
@@ -11,8 +26,10 @@ export default function App(){
         <label className="text">
           New Task Entry
         </label>
-        <input type="text"></input>
-        <button className="btn">
+        <input value = {newTask} 
+        onChange = {e => setNewTask(e.target.value)} 
+        type="text"></input>
+        <button onClick={addTask} className="btn">
           Add
         </button>
       </form>
@@ -22,7 +39,10 @@ export default function App(){
       </h1>
 
       <ul className="list">
-        <Task></Task>
+        {tasks.map(task => {
+            return <Task text={task.text}></Task>
+          }
+        )}
       </ul>
 
 
